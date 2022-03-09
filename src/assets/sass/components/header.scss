@@ -1,0 +1,85 @@
+/*------------------*
+# Header
+*------------------*/
+
+.header {
+  background-color: $color-white;
+  .header__container {
+    padding: 40px 20px 30px;
+  }
+  .header__topside {
+    display: grid;
+    grid-template-columns: auto minmax(200px, 500px) auto;
+    align-items: center;
+    margin-bottom: 28px;
+    .header__search {
+      width: fit-content;
+      display: inline-flex;
+      align-items: center;
+      border-bottom: 1px solid $color-black;
+      margin-bottom: 5px;
+      .search__icon {
+        width: 20px;
+        height: 20px;
+      }
+      .search__input {
+        color: $color-black;
+        outline: none;
+        padding: 10px;
+        font-size: 16px;
+        border: none;
+      }
+    }
+    .logo {
+      img {
+        width: 100%;
+      }
+    }
+    .controls__wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      .account__controls {
+        display: flex;
+        span {
+          position: relative;
+          display: inline-block;
+          padding: 0px 13px;
+          font-size: 12px;
+          line-height: 14.08px;
+
+          &::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            display: block;
+            background-color: $color-black;
+            width: 1px;
+            height: 60%;
+          }
+          &:last-child:after {
+            display: none;
+          }
+        }
+      }
+      .user__controls {
+      }
+    }
+  }
+  .header__bottomside {
+    max-width: 1240px;
+    margin: 0 auto;
+    .bottomside__list {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .list__item {
+        text-transform: uppercase;
+        font-size: 16px;
+        line-height: 18.77px;
+      }
+    }
+  }
+}

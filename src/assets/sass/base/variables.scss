@@ -17,7 +17,7 @@
  * Base font family
 */
 
-$base-font-family: Arial, sans-serif !default;
+$base-font-family: "Work Sans", sans-serif;
 
 /*
  * Base font sizes
@@ -31,6 +31,13 @@ $h3-size: 24px !default;
 $h4-size: 20px !default;
 $h5-size: 16px !default;
 $h6-size: 14px !default;
+
+/*
+ * Base font weights
+*/
+
+$standart-weight: 400;
+$bold-weight: 700;
 
 /*
  * Heading spacing
@@ -56,3 +63,6 @@ $base-line-height: 1.5 !default;
 
 $color-white: #ffffff !default;
 $color-black: #000000 !default;
+$color-lime: #e0ff04 !default;
+$color-lightgrey: #999999 !default;
+$color-grey: #707070 !default;

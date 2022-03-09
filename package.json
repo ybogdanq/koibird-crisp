@@ -8,7 +8,6 @@
     },
     "author": "Kieran Brown",
     "license": "ISC",
-    "dependencies": {},
     "devDependencies": {
         "@babel/core": "^7.11.0",
         "@babel/preset-env": "^7.11.0",
@@ -17,6 +16,7 @@
         "gulp-autoprefixer": "^6.1.0",
         "gulp-babel": "^8.0.0",
         "gulp-concat": "^2.6.1",
+        "gulp-embed-svg": "^1.4.7",
         "gulp-htmlmin": "^5.0.1",
         "gulp-imagemin": "^7.1.0",
         "gulp-nunjucks-render": "^2.2.3",
