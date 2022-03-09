@@ -32,6 +32,10 @@ body {
   overflow-x: hidden;
   position: relative;
   width: 100%;
+  &.lock-scroll {
+    height: 100vh;
+    overflow-y: hidden;
+  }
 }
 
 ul {

@@ -18,6 +18,7 @@
       align-items: center;
       border-bottom: 1px solid $color-black;
       margin-bottom: 5px;
+      margin-right: 12px;
       .search__icon {
         width: 20px;
         height: 20px;
@@ -41,13 +42,16 @@
       justify-content: flex-end;
       .account__controls {
         display: flex;
+        margin-right: 60px;
         span {
           position: relative;
           display: inline-block;
-          padding: 0px 13px;
+          padding: 13px;
           font-size: 12px;
           line-height: 14.08px;
-
+          &:last-child {
+            padding-right: 0;
+          }
           &::after {
             content: "";
             position: absolute;
@@ -65,6 +69,12 @@
         }
       }
       .user__controls {
+        img {
+          margin-right: 25px;
+          &:last-child {
+            margin-right: 0;
+          }
+        }
       }
     }
   }
@@ -79,6 +89,194 @@
         text-transform: uppercase;
         font-size: 16px;
         line-height: 18.77px;
+      }
+    }
+  }
+}
+
+.header__burger_open {
+  display: none;
+  padding: 5px;
+  border: none;
+  background-color: transparent;
+  span {
+    display: block;
+    width: 20px;
+    height: 3px;
+    background-color: $color-black;
+    margin: 3px 0px;
+  }
+}
+
+.header__burger_close {
+  display: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .header {
+    .header__container {
+      padding: 30px 15px 30px;
+    }
+    .header__topside {
+      grid-template-columns: auto minmax(200px, 370px) auto;
+      margin-bottom: 28px;
+      .header__search {
+        margin-bottom: 5px;
+        margin-right: 12px;
+        max-width: 90%;
+        .search__icon {
+          width: 15px;
+          height: 15px;
+        }
+        .search__input {
+          color: $color-black;
+          max-width: 100%;
+
+          padding: 7px;
+          font-size: 16px;
+        }
+      }
+      .logo {
+        img {
+          width: 100%;
+        }
+      }
+      .controls__wrapper {
+        .account__controls {
+          margin-right: 40px;
+          span {
+            padding: 10px;
+            font-size: 12px;
+            line-height: 14.08px;
+          }
+        }
+        .user__controls {
+          img {
+            margin-right: 20px;
+          }
+        }
+      }
+    }
+    .header__bottomside {
+      max-width: 1040px;
+
+      .bottomside__list {
+        .list__item {
+          font-size: 14px;
+          line-height: 18.77px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .header {
+    .header__topside {
+      grid-template-columns: auto minmax(200px, 330px) auto;
+
+      margin-bottom: 20px;
+      .controls__wrapper {
+        .account__controls {
+          margin-right: 20px;
+          span {
+            font-size: 12px;
+            line-height: 12.08px;
+          }
+        }
+        .user__controls {
+          img {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+    .header__bottomside {
+      max-width: 840px;
+
+      .bottomside__list {
+        .list__item {
+          font-size: 13px;
+          line-height: 18.77px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header__burger_open {
+    display: block;
+  }
+  .header__burger_close {
+    display: block;
+  }
+  .header__burger-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    background-color: $color-white;
+    padding: 30px 20px;
+    transform: translateX(-100%);
+    transition: all 0.3s ease;
+    .header__burger_close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      padding: 5px;
+      border: none;
+      background-color: transparent;
+    }
+    .header__bottomside {
+      .bottomside__list {
+        flex-direction: column-reverse;
+        .list__item {
+          padding: 10px 0px;
+          width: 100%;
+        }
+      }
+    }
+  }
+  .header__burger-menu.active {
+    transform: translateX(0);
+  }
+
+  .header {
+    .header__topside {
+      margin-bottom: 0;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      width: 100%;
+
+      .logo {
+        max-width: 300px;
+        img {
+          width: 100%;
+        }
+      }
+
+      .header__search {
+        margin-bottom: 5px;
+        margin-right: 0px;
+        flex-direction: row-reverse;
+
+        .search__icon {
+          width: 15px;
+          height: 15px;
+        }
+        .search__input {
+          color: $color-black;
+          max-width: 100%;
+
+          padding: 7px;
+          font-size: 16px;
+        }
       }
     }
   }

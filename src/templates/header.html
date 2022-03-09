@@ -1,14 +1,16 @@
 <header class="header">
   <div class="header__container container">
     <div class="header__topside">
+      <!-- header input field -->
       <div class="header__search">
         <img src="images/search.svg" class="search__icon" alt="" />
-        <input type="text" placeholder="test" class="search__input" />
+        <input type="text" class="search__input" />
       </div>
       <div class="logo">
         <img src="images/logo.svg" />
       </div>
-      <div class="controls__wrapper">
+      <!-- header controls -->
+      <div class="controls__wrapper" data-responsive-hide>
         <div class="account__controls">
           <span>Register</span>
           <span>My Account</span>
@@ -18,8 +20,15 @@
           <img src="images/bag.svg" alt="" />
         </div>
       </div>
+      <!-- header burger button -->
+      <button class="header__burger_open">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
-    <nav class="header__bottomside">
+    <!-- header list of links -->
+    <nav class="header__bottomside" data-responsive-hide>
       <ul class="bottomside__list">
         <li class="list__item">
           <a href="#">SHOP BY CATEGORY</a>
@@ -38,5 +47,9 @@
         </li>
       </ul>
     </nav>
+  </div>
+  <!-- Burger menu list wrapper -->
+  <div class="header__burger-menu burger__menu">
+    <button class="header__burger_close">&#10005;</button>
   </div>
 </header>
