@@ -6,7 +6,181 @@
   min-height: 100vh;
   .banner {
     flex: 1;
-    height: 100%;
-    background-color: url(../../images/banner.webp);
+    display: flex;
+    align-items: center;
+    background: url("./../images/banner.webp") no-repeat;
+    background-size: cover;
+    background-position: top bottom;
+    .banner__container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      width: 100%;
+      .banner__logo {
+        max-width: 765px;
+        margin-bottom: 20px;
+        img {
+          width: 100%;
+        }
+      }
+      .banner__link {
+        position: relative;
+        padding-right: 25px;
+        color: $color-white;
+        font-size: $base-font-size;
+        letter-spacing: 1.7px;
+        font-weight: $standart-weight;
+        line-height: 18.77px;
+        &::after {
+          content: "";
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 0;
+          height: 0;
+          border-top: 10px solid transparent;
+          border-bottom: 10px solid transparent;
+
+          border-left: 10px solid #e0ff04;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .meeting-section {
+    min-height: 100vh;
+    .banner {
+      background-position: top bottom;
+      .banner__container {
+        width: 100%;
+        .banner__logo {
+          max-width: 565px;
+          img {
+            width: 100%;
+          }
+        }
+        .banner__link {
+          padding-right: 25px;
+
+          font-size: $base-font-size;
+          letter-spacing: 1.7px;
+
+          line-height: 18.77px;
+          &::after {
+            border-top: 7px solid transparent;
+            border-bottom: 7px solid transparent;
+
+            border-left: 15px solid #e0ff04;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .meeting-section {
+    .banner {
+      background-position: top bottom;
+      .banner__container {
+        width: 100%;
+        .banner__logo {
+          max-width: 425px;
+          margin-bottom: 10px;
+          img {
+            width: 100%;
+          }
+        }
+        .banner__link {
+          padding-right: 20px;
+
+          font-size: $base-font-size - 3px;
+          letter-spacing: 1.5px;
+
+          line-height: 15.77px;
+          &::after {
+            border-top: 6px solid transparent;
+            border-bottom: 6px solid transparent;
+
+            border-left: 12px solid #e0ff04;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .meeting-section {
+    min-height: 85vh;
+    .banner {
+      position: relative;
+      background-position: top bottom;
+      & * {
+        z-index: 1;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        z-index: 0;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba($color: $color-black, $alpha: 0.25);
+      }
+      .banner__container {
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        .banner__logo {
+          max-width: 300px;
+          margin-bottom: 5px;
+        }
+        .banner__link {
+          padding-right: 20px;
+
+          font-size: $base-font-size - 5px;
+          letter-spacing: 1px;
+
+          line-height: 12.77px;
+          &::after {
+            border-top: 6px solid transparent;
+            border-bottom: 6px solid transparent;
+
+            border-left: 10px solid #e0ff04;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 425px) {
+  .meeting-section {
+    min-height: 75vh;
+    .banner {
+      background-position: top bottom;
+      .banner__container {
+        .banner__logo {
+          max-width: 270px;
+          margin-bottom: 5px;
+        }
+        .banner__link {
+          padding-right: 20px;
+
+          font-size: $base-font-size - 5px;
+          letter-spacing: 1px;
+
+          line-height: 12.77px;
+          &::after {
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+
+            border-left: 10px solid #e0ff04;
+          }
+        }
+      }
+    }
   }
 }
