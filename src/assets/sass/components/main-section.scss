@@ -1,0 +1,12 @@
+@import "./components/header";
+
+.meeting-section {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  .banner {
+    flex: 1;
+    height: 100%;
+    background-color: url(../../images/banner.webp);
+  }
+}

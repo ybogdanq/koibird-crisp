@@ -3,7 +3,10 @@
     <div class="header__topside">
       <!-- header input field -->
       <div class="header__search">
-        <img src="images/search.svg" class="search__icon" alt="" />
+        <button class="search__button">
+          <img src="images/search.svg" alt="" />
+        </button>
+
         <input type="text" class="search__input" />
       </div>
       <div class="logo">
@@ -21,11 +24,13 @@
         </div>
       </div>
       <!-- header burger button -->
-      <button class="header__burger_open">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+      <div class="header__burger_wrapper">
+        <button class="header__burger_open">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </div>
     <!-- header list of links -->
     <nav class="header__bottomside" data-responsive-hide>
