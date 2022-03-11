@@ -90,21 +90,6 @@
           }
           .product__price {
           }
-          .product_button {
-            position: relative;
-            font-weight: $standart-weight;
-            font-size: $base-font-size;
-            line-height: 18.77px;
-            border: none;
-            background-color: transparent;
-            padding-bottom: 6px;
-            text-transform: uppercase;
-            border-bottom: 2px solid $color-lime;
-            transition: all 0.3s ease;
-            &:hover {
-              padding-bottom: 10px;
-            }
-          }
         }
       }
     }
@@ -136,9 +121,6 @@
             .product__wishlist_button {
               width: 16px;
             }
-            .product_button {
-              font-size: $base-font-size - 2px;
-            }
           }
         }
       }
@@ -169,10 +151,6 @@
             .product__wishlist_button {
               width: 16px;
             }
-            .product_button {
-              font-size: $base-font-size - 3px;
-              padding-bottom: 5px;
-            }
           }
         }
       }
@@ -181,7 +159,7 @@
 }
 @media screen and (max-width: 425px) {
   .new-in__section {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     .new-in__slider__wrapper {
       .new-in__slider {
         .new-in__slider__card {
@@ -194,9 +172,6 @@
             }
             .product__wishlist_button {
               width: 16px;
-            }
-            .product_button {
-              font-size: $base-font-size - 3px;
             }
           }
         }

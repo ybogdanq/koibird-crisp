@@ -1,9 +1,22 @@
-// document.addEventListener("DOMContentLoaded", () => {
-//   const totalCounter = document.querySelectorAll(".bestsellers__slide").length;
+const clientWidth = window.innerWidth;
 
-//   slider(
-//     ".bestsellers__slider__card",
-//     ".bestsellers__prev-arrow",
-//     ".bestsellers__next-arrow"
-//   );
-// });
+const slidesToShow = getSlidesToShow(clientWidth);
+
+slider(
+  ".bestsellers__slider__card",
+  ".bestsellers__prev-arrow",
+  ".bestsellers__next-arrow",
+  1,
+  slidesToShow
+);
+
+window.addEventListener("resize", () => {
+  const newSlidesToShow = getSlidesToShow(window.innerWidth);
+  slider(
+    ".bestsellers__slider__card",
+    ".bestsellers__prev-arrow",
+    ".bestsellers__next-arrow",
+    1,
+    newSlidesToShow
+  );
+});

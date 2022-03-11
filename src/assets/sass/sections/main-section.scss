@@ -30,6 +30,10 @@
         font-weight: $standart-weight;
         line-height: 18.77px;
         text-transform: uppercase;
+        transition: all 0.3s ease;
+        &:hover {
+          color: $color-lime;
+        }
         &::after {
           content: "";
           position: absolute;

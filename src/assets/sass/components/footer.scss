@@ -59,7 +59,6 @@
       }
       .checkbox__group {
         display: flex;
-        align-items: center;
         justify-content: flex-start;
       }
       .newsletter__submit {
@@ -68,6 +67,206 @@
         text-transform: uppercase;
         border: none;
         background-color: transparent;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .footer {
+    padding: 40px 0px;
+    .footer__container {
+      grid-template-columns: 1fr minmax(300px, 405px);
+    }
+    .footer__leftside {
+      .footer_logo {
+        max-width: 170px;
+        margin-bottom: 40px;
+      }
+      .footer__menu {
+        .menu__item {
+          a {
+            font-size: $base-font-size - 2px;
+          }
+        }
+        .menu__item + .menu__item {
+          margin-left: 35px;
+        }
+      }
+    }
+    .footer__rightside {
+      .footer__newsletter {
+        .form__group {
+          margin-bottom: 10px;
+          .newsletter__input-label {
+            margin-bottom: 7px;
+            font-size: $base-font-size - 2px;
+          }
+          .newsletter__input {
+            font-size: $base-font-size - 2px;
+            padding: 12px 7px;
+          }
+          input[type="checkbox"].newsletter-subscription {
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+          }
+          .newsletter-subscription-label {
+            font-size: 11px;
+          }
+        }
+        .newsletter__submit {
+          font-size: $base-font-size - 2px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .footer {
+    padding: 30px 0px;
+    .footer__container {
+      grid-template-columns: 1fr;
+    }
+    .footer__leftside {
+      padding-bottom: 20px;
+      border-bottom: 1px solid $color-black;
+      margin-bottom: 20px;
+      .footer_logo {
+        max-width: 170px;
+        margin-bottom: 15px;
+      }
+    }
+    .footer__rightside {
+      .footer__newsletter {
+        .form__group {
+          .newsletter__input-label {
+            font-size: $base-font-size - 2px;
+          }
+          .newsletter__input {
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer {
+    .footer__leftside {
+      .footer_logo {
+        max-width: 150px;
+        margin-bottom: 15px;
+      }
+      .footer__menu {
+        .menu__item {
+          a {
+            font-size: $base-font-size - 3px;
+          }
+        }
+        .menu__item + .menu__item {
+          margin-left: 25px;
+        }
+      }
+    }
+    .footer__rightside {
+      .footer__newsletter {
+        .form__group {
+          .newsletter__input-label {
+            margin-bottom: 7px;
+            font-size: $base-font-size - 3px;
+          }
+          .newsletter__input {
+            width: 60%;
+            font-size: $base-font-size - 3px;
+            padding: 12px 7px;
+          }
+          input[type="checkbox"].newsletter-subscription {
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+          }
+          .newsletter-subscription-label {
+            font-size: 11px;
+          }
+        }
+        .newsletter__submit {
+          font-size: $base-font-size - 3px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .footer {
+    .footer__leftside {
+      .footer_logo {
+        margin-bottom: 0px;
+      }
+      .footer__menu {
+        display: grid;
+        grid-template-columns: 1fr;
+        .menu__item {
+          a {
+            font-size: $base-font-size - 3px;
+          }
+        }
+        .menu__item + .menu__item {
+          margin-left: 0px;
+        }
+      }
+    }
+    .footer__rightside {
+      .footer__newsletter {
+        .form__group {
+          .newsletter__input {
+            width: 80%;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 425px) {
+  .footer {
+    padding: 25px 0px;
+    .footer__leftside {
+      .footer__menu {
+        .menu__item {
+          a {
+            font-size: $base-font-size - 3px;
+          }
+        }
+        .menu__item + .menu__item {
+          margin-left: 0px;
+        }
+      }
+    }
+    .footer__rightside {
+      .footer__newsletter {
+        .form__group {
+          .newsletter__input-label {
+            margin-bottom: 7px;
+            font-size: $base-font-size - 4px;
+          }
+          .newsletter__input {
+            width: 100%;
+            font-size: $base-font-size - 4px;
+            padding: 12px 7px;
+          }
+          input[type="checkbox"].newsletter-subscription {
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+          }
+          .newsletter-subscription-label {
+            font-size: 10px;
+          }
+        }
+        .newsletter__submit {
+          font-size: $base-font-size - 4px;
+        }
       }
     }
   }

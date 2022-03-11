@@ -1,10 +1,10 @@
 .bestsellers__section {
+  margin-bottom: 90px;
   .title {
     margin-bottom: 20px;
   }
   .bestsellers__slider__wrapper {
     position: relative;
-    margin-bottom: 90px;
 
     .bestsellers__prev-arrow,
     .bestsellers__next-arrow {
@@ -44,11 +44,10 @@
       overflow: hidden;
       .bestsellers__slider__card {
         padding: 20px;
-        flex: 0 0 25%;
         transition: all 0.3s ease;
         transform: translateX(0%);
         .bestsellers__card__image {
-          height: 300px;
+          height: auto;
 
           img {
             object-fit: contain;
@@ -61,7 +60,7 @@
           position: relative;
           color: $color-black;
           width: 100%;
-          padding: 50px 0px;
+          padding: 20% 0px 0px;
           span {
             display: block;
             font-weight: $standart-weight;
@@ -89,21 +88,88 @@
           .product__brand {
             color: $color-grey;
           }
-          .product__price {
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .bestsellers__section {
+    margin-bottom: 70px;
+    .title {
+      margin-bottom: 20px;
+    }
+    .bestsellers__slider__wrapper {
+      padding: 0px 20px;
+      .bestsellers__prev-arrow,
+      .bestsellers__next-arrow {
+        padding: 0px 20px;
+        width: 15px;
+      }
+      .bestsellers__slider {
+        .bestsellers__slider__card {
+          padding: 20px;
+          .bestsellers__card__description {
+            padding: 20% 0px 0px;
+            span {
+              font-size: $base-font-size - 2;
+              line-height: 20.77px;
+            }
+            .product__wishlist_button {
+              width: 16px;
+            }
           }
-          .product_button {
-            position: relative;
-            font-weight: $standart-weight;
-            font-size: $base-font-size;
-            line-height: 18.77px;
-            border: none;
-            background-color: transparent;
-            padding-bottom: 6px;
-            text-transform: uppercase;
-            border-bottom: 2px solid $color-lime;
-            transition: all 0.3s ease;
-            &:hover {
-              padding-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .bestsellers__section {
+    margin-bottom: 50px;
+    .title {
+      margin-bottom: 10px;
+    }
+    .bestsellers__slider__wrapper {
+      padding: 0px 20px;
+      .bestsellers__slider {
+        .bestsellers__slider__card {
+          padding: 15px;
+          .bestsellers__card__description {
+            padding: 20% 0px 0px;
+            span {
+              font-size: $base-font-size - 3px;
+              line-height: 20.77px;
+              margin-bottom: 2.5px;
+              &:last-child {
+                margin-bottom: 5px;
+              }
+            }
+            .product__wishlist_button {
+              width: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 425px) {
+  .bestsellers__section {
+    margin-bottom: 30px;
+    .bestsellers__slider__wrapper {
+      .bestsellers__slider {
+        .bestsellers__slider__card {
+          padding: 10px;
+          .bestsellers__card__description {
+            padding: 20% 0px 0px;
+            span {
+              font-size: $base-font-size - 3px;
+              line-height: 20.77px;
+            }
+            .product__wishlist_button {
+              width: 16px;
             }
           }
         }

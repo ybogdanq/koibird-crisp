@@ -8,9 +8,9 @@
     padding: 40px 20px 30px;
   }
   .header__topside {
-    display: grid;
-    grid-template-columns: auto minmax(200px, 500px) auto;
+    display: flex;
     align-items: center;
+    justify-content: space-between;
     margin-bottom: 28px;
     .header__search {
       width: fit-content;
@@ -19,6 +19,7 @@
       border-bottom: 1px solid $color-black;
       margin-bottom: 5px;
       margin-right: 12px;
+      max-width: 25%;
       .search__button {
         background-color: transparent;
         border: none;
@@ -36,13 +37,18 @@
       }
     }
     .logo {
+      width: 50%;
+
       display: flex;
       align-items: center;
+      justify-content: center;
       img {
+        max-width: 500px;
         width: 100%;
       }
     }
     .controls__wrapper {
+      max-width: 25%;
       display: flex;
       align-items: center;
       justify-content: flex-end;
@@ -55,6 +61,7 @@
           padding: 13px;
           font-size: 12px;
           line-height: 14.08px;
+          white-space: nowrap;
           &:last-child {
             padding-right: 0;
           }
@@ -76,6 +83,7 @@
       }
       .user__controls {
         img {
+          white-space: nowrap;
           margin-right: 25px;
           &:last-child {
             margin-right: 0;
@@ -92,9 +100,55 @@
       align-items: center;
       justify-content: space-between;
       .list__item {
+        position: relative;
         text-transform: uppercase;
         font-size: 16px;
         line-height: 18.77px;
+        .list__item__child.active {
+          display: grid;
+        }
+        .list__item__child {
+          display: none;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          transform: translateY(100%);
+          background-color: $color-white;
+          padding: 30px 50px;
+          grid-template-columns: repeat(2, minmax(min-content, 300px));
+          grid-template-rows: repeat(auto-fill, 1fr);
+          gap: 0px 100px;
+
+          li {
+            cursor: pointer;
+            max-width: 200px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            a {
+              font-size: $base-font-size;
+              padding-bottom: 8px;
+              position: relative;
+              &:hover::after {
+                width: 100%;
+              }
+              &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                display: block;
+                background-color: $color-lime;
+                width: 0;
+                height: 5px;
+                transition: all 0.3s ease;
+              }
+            }
+          }
+          li:nth-child(even) {
+            margin-bottom: 25px;
+          }
+        }
       }
     }
   }
@@ -234,6 +288,7 @@
     padding: 30px 20px;
     transform: translateX(-100%);
     transition: all 0.3s ease;
+    overflow: scroll;
     .header__burger_close {
       position: absolute;
       top: 20px;
@@ -243,11 +298,56 @@
       background-color: transparent;
     }
     .header__bottomside {
+      flex: 0 0 1;
+      overflow: scroll;
       .bottomside__list {
         flex-direction: column-reverse;
+
         .list__item {
           padding: 10px 0px;
           width: 100%;
+          .list__item__child.active {
+            display: block;
+          }
+          .list__item__child {
+            display: none;
+            position: relative;
+            transform: translate(0);
+            padding: 0;
+            transition: all 0.3s ease;
+            li:nth-child(n) {
+              margin-bottom: 0px;
+            }
+            li {
+              cursor: pointer;
+              max-width: 200px;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              padding: 5px 0px 5px 10px;
+              border-bottom: 1px solid $color-lightgrey;
+              a {
+                padding-bottom: 8px;
+                position: relative;
+                color: $color-grey;
+                font-size: $base-font-size - 3px;
+                &:hover::after {
+                  width: 100%;
+                }
+                &::after {
+                  content: "";
+                  position: absolute;
+                  bottom: 0;
+                  left: 0;
+                  display: block;
+                  background-color: $color-lime;
+                  width: 0;
+                  height: 5px;
+                  transition: all 0.3s ease;
+                }
+              }
+            }
+          }
         }
       }
     }
