@@ -1,0 +1,74 @@
+.footer {
+  padding: 35px 0px 70px;
+  background-color: $color-lime;
+  .footer__container {
+    display: grid;
+    grid-template-columns: 1fr minmax(300px, 525px);
+    align-items: flex-end;
+  }
+  .footer__leftside {
+    .footer_logo {
+      max-width: 200px;
+      margin-bottom: 50px;
+      img {
+        width: 100%;
+      }
+    }
+    .footer__menu {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      .menu__item {
+        a {
+          font-size: $base-font-size;
+          text-transform: uppercase;
+        }
+      }
+      .menu__item + .menu__item {
+        margin-left: 55px;
+      }
+    }
+  }
+  .footer__rightside {
+    .footer__newsletter {
+      .form__group {
+        margin-bottom: 10px;
+        .newsletter__input-label {
+          display: block;
+          margin-bottom: 10px;
+          text-transform: uppercase;
+          font-size: $base-font-size;
+        }
+        .newsletter__input {
+          border: none;
+          border-radius: 0px;
+          background-color: $color-white;
+          font-size: $base-font-size;
+          padding: 15px 10px;
+          outline: none;
+          width: 100%;
+        }
+        input[type="checkbox"].newsletter-subscription {
+          width: 20px;
+          height: 20px;
+          margin-right: 5px;
+        }
+        .newsletter-subscription-label {
+          font-size: 12px;
+        }
+      }
+      .checkbox__group {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+      }
+      .newsletter__submit {
+        cursor: pointer;
+        font-size: $base-font-size;
+        text-transform: uppercase;
+        border: none;
+        background-color: transparent;
+      }
+    }
+  }
+}

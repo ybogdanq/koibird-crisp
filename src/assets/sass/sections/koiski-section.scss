@@ -3,6 +3,7 @@
   grid-template-columns: repeat(6, 1fr);
   gap: 20px;
   position: relative;
+  margin-bottom: 50px;
   .koiski__item {
     position: relative;
     height: 0px;
@@ -36,6 +37,7 @@
 
 @media screen and (max-width: 1440px) {
   .koiski__section {
+    margin-bottom: 40px;
     gap: 15px;
     .koiski__tag {
       padding: 5px 45px;
@@ -48,6 +50,7 @@
 
 @media screen and (max-width: 1024px) {
   .koiski__section {
+    margin-bottom: 30px;
     gap: 10px;
     .koiski__tag {
       padding: 5px 40px;
@@ -59,18 +62,37 @@
 }
 @media screen and (max-width: 768px) {
   .koiski__section {
-    grid-template-columns: repeat(4, 1fr);
+    margin-bottom: 20px;
+    grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     .koiski__tag {
       padding: 5px 30px;
 
-      font-size: 32px;
+      font-size: 30px;
       line-height: 40px;
+    }
+    [data-hide] {
+      display: none;
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .koiski__section {
+    .koiski__tag {
+      padding: 2px 20px;
+
+      font-size: 25px;
+      line-height: 35px;
     }
   }
 }
 @media screen and (max-width: 425px) {
   .koiski__section {
-    display: none;
+    .koiski__tag {
+      padding: 2px 15px;
+
+      font-size: 20px;
+      line-height: 30px;
+    }
   }
 }

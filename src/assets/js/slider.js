@@ -4,12 +4,18 @@ function slider(card, prev, next, slidesToSlide = 1, slidesToShow = 4) {
   const nextBtn = document.querySelector(next);
   const cardsCount = cards.length;
   let counter = 0;
+  slidesToShow = +slidesToShow;
+
+  // setting size of each card
+  cards.forEach((card) => {
+    console.log(slidesToShow);
+    card.style.flex = `0 0 ${100 / slidesToShow}%`;
+  });
 
   prevBtn.addEventListener("click", () => {
     counter++;
 
     if (counter > 0) {
-      console.log(-cardsCount + slidesToShow);
       counter = -cardsCount + slidesToShow;
       cards.forEach((card) => {
         card.style.transform = `translateX(${counter * slidesToSlide * 100}%)`;

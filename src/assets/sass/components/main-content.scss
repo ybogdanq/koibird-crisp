@@ -67,3 +67,62 @@
 
 .product_button {
 }
+
+@media screen and (max-width: 1024px) {
+  .wide-title {
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: 3.5px;
+    padding: 30px 0px;
+    margin-bottom: 70px;
+  }
+  .title {
+    font-size: 18px;
+    line-height: 20.81px;
+    letter-spacing: 6px;
+    padding: 25px;
+    &::after,
+    &::before {
+      height: 5px;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .wide-title {
+    font-size: 15px;
+    line-height: 17px;
+    letter-spacing: 2px;
+    padding: 25px 0px;
+    margin-bottom: 50px;
+  }
+  .title {
+    font-size: 15px;
+    line-height: 17px;
+    letter-spacing: 2px;
+    padding: 20px;
+    &::after,
+    &::before {
+      height: 5px;
+    }
+  }
+}
+@media screen and (max-width: 425px) {
+  .wide-title {
+    max-width: 100%;
+    font-size: 14px;
+    line-height: 15px;
+    letter-spacing: 1.5px;
+    padding: 20px 0px;
+    margin-bottom: 40px;
+  }
+  .title {
+    font-size: 14px;
+    line-height: 15px;
+    letter-spacing: 1.5px;
+    padding: 20px;
+    &::after,
+    &::before {
+      height: 5px;
+    }
+  }
+}

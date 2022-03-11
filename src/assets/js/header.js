@@ -5,18 +5,6 @@ const searchBtn = document.querySelector(".search__button");
 const searchWrapper = document.querySelector(".header__search");
 const body = document.body;
 
-burgerMenuOpenBtn.addEventListener("click", () => {
-  burgerMenu.classList.add("active");
-  body.classList.add("lock-scroll");
-});
-burgerMenuCloseBtn.addEventListener("click", () => {
-  burgerMenu.classList.remove("active");
-  body.classList.remove("lock-scroll");
-});
-searchBtn.addEventListener("click", () => {
-  searchWrapper.classList.toggle("active");
-});
-
 document.addEventListener("DOMContentLoaded", () => {
   if (document.documentElement.clientWidth <= 768) {
     onMinResizeHandler();
@@ -25,6 +13,18 @@ document.addEventListener("DOMContentLoaded", () => {
     if (document.documentElement.clientWidth <= 768) {
       onMinResizeHandler();
     }
+  });
+
+  burgerMenuOpenBtn.addEventListener("click", () => {
+    burgerMenu.classList.add("active");
+    body.classList.add("lock-scroll");
+  });
+  burgerMenuCloseBtn.addEventListener("click", () => {
+    burgerMenu.classList.remove("active");
+    body.classList.remove("lock-scroll");
+  });
+  searchBtn.addEventListener("click", () => {
+    searchWrapper.classList.toggle("active");
   });
 });
 
