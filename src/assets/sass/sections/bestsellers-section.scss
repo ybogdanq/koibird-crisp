@@ -1,0 +1,113 @@
+.bestsellers__section {
+  .title {
+    margin-bottom: 20px;
+  }
+  .bestsellers__slider__wrapper {
+    position: relative;
+    margin-bottom: 90px;
+
+    .bestsellers__prev-arrow,
+    .bestsellers__next-arrow {
+      position: absolute;
+      z-index: 10;
+      padding: 0px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      background-color: transparent;
+      top: 50%;
+      transform: translateY(-50%);
+
+      width: 16px;
+      height: 30px;
+      img {
+        transition: all 0.3s ease;
+      }
+      &:hover {
+        img {
+          transform: scale(1.2);
+        }
+      }
+    }
+    .bestsellers__prev-arrow {
+      left: -20px;
+    }
+    .bestsellers__next-arrow {
+      right: -20px;
+    }
+    .bestsellers__slider {
+      width: 100%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-start;
+      overflow: hidden;
+      .bestsellers__slider__card {
+        padding: 20px;
+        flex: 0 0 25%;
+        transition: all 0.3s ease;
+        transform: translateX(0%);
+        .bestsellers__card__image {
+          height: 300px;
+
+          img {
+            object-fit: contain;
+            height: 100%;
+            width: auto;
+            max-width: 100%;
+          }
+        }
+        .bestsellers__card__description {
+          position: relative;
+          color: $color-black;
+          width: 100%;
+          padding: 50px 0px;
+          span {
+            display: block;
+            font-weight: $standart-weight;
+            font-size: $base-font-size;
+            line-height: 20.77px;
+            margin-bottom: 5px;
+            &:last-child {
+              margin-bottom: 10px;
+            }
+          }
+          .product__wishlist_button {
+            border: none;
+            background-color: transparent;
+            width: 16px;
+            position: absolute;
+            right: 0;
+            top: 20px;
+            img {
+              width: 100%;
+            }
+          }
+          .product__name {
+            text-transform: uppercase;
+          }
+          .product__brand {
+            color: $color-grey;
+          }
+          .product__price {
+          }
+          .product_button {
+            position: relative;
+            font-weight: $standart-weight;
+            font-size: $base-font-size;
+            line-height: 18.77px;
+            border: none;
+            background-color: transparent;
+            padding-bottom: 6px;
+            text-transform: uppercase;
+            border-bottom: 2px solid $color-lime;
+            transition: all 0.3s ease;
+            &:hover {
+              padding-bottom: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

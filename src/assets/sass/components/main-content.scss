@@ -3,10 +3,67 @@
 *------------------*/
 
 .main-content {
-  align-items: center;
-  display: flex;
   min-height: 100vh;
-  justify-content: center;
   text-align: center;
   width: 100%;
+}
+
+.wide-title {
+  position: relative;
+  font-size: 22px;
+  font-weight: $bold-weight;
+  line-height: 26px;
+  letter-spacing: 5px;
+  max-width: 90%;
+  padding: 50px 0px;
+  margin: 0 auto;
+  margin-bottom: 120px;
+  text-transform: uppercase;
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 200vw;
+    transform: translateX(-50%);
+    height: 100%;
+    z-index: -1;
+    background-color: $color-lime;
+  }
+}
+
+.title {
+  display: inline-block;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: $standart-weight;
+  font-size: 22px;
+  line-height: 25.81px;
+  letter-spacing: 6px;
+  margin: 0 auto;
+  padding: 35px;
+  margin-top: 0px;
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    width: 100vw;
+    height: 5px;
+    background-color: $color-lime;
+  }
+  &::after {
+    right: 100%;
+  }
+  &::before {
+    left: 100%;
+  }
+}
+
+.product_button {
 }

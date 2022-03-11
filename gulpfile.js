@@ -22,7 +22,7 @@ const babel = require("gulp-babel");
 // Optimise Images
 function imageMin(cb) {
   gulp
-    .src("src/assets/images/*")
+    .src("src/assets/images/**/*")
     .pipe(imagemin())
     .pipe(gulp.dest("dist/images"));
   cb();
@@ -86,7 +86,7 @@ function nunjucks(cb) {
     .src("src/pages/*.html")
     .pipe(
       nunjucksRender({
-        path: ["src/templates/"], // String or Array
+        path: ["src/templates/", "src/sections/"], // String or Array
       })
     )
     .pipe(gulp.dest("dist"));
@@ -98,7 +98,7 @@ function nunjucksMinify(cb) {
     .src("src/pages/*.html")
     .pipe(
       nunjucksRender({
-        path: ["src/templates/"], // String or Array
+        path: [`src/templates/`, "src/sections/"], // String or Array
       })
     )
     .pipe(
@@ -120,7 +120,7 @@ function watch_files() {
   gulp.watch("src/assets/sass/**/*.scss", css);
   gulp.watch("src/assets/js/*.js", js).on("change", browserSync.reload);
   gulp.watch("src/pages/*.html", nunjucks).on("change", browserSync.reload);
-  gulp.watch("src/templates/*.html", nunjucks).on("change", browserSync.reload);
+  gulp.watch("src/**/*.html", nunjucks).on("change", browserSync.reload); //src/templates/*.html - in case of error
 }
 
 // Default 'gulp' command with start local server and watch files for changes.

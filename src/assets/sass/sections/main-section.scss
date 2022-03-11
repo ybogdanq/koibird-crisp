@@ -31,6 +31,7 @@
         letter-spacing: 1.7px;
         font-weight: $standart-weight;
         line-height: 18.77px;
+        text-transform: uppercase;
         &::after {
           content: "";
           position: absolute;
@@ -56,6 +57,7 @@
       background-position: top bottom;
       .banner__container {
         width: 100%;
+        max-width: 1100px;
         .banner__logo {
           max-width: 565px;
           img {
