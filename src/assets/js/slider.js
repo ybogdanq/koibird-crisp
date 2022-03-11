@@ -8,7 +8,6 @@ function slider(card, prev, next, slidesToSlide = 1, slidesToShow = 4) {
 
   // setting size of each card
   cards.forEach((card) => {
-    console.log(slidesToShow);
     card.style.flex = `0 0 ${100 / slidesToShow}%`;
   });
 

@@ -15,12 +15,3 @@ function getResponsive(currentWidth) {
     [1]: currentWidth <= 425,
   };
 }
-
-function onMinResizeHandler() {
-  const headerElementsToHide = document.querySelectorAll(
-    "[data-responsive-hide]"
-  );
-  headerElementsToHide.forEach((wrapper) => {
-    burgerMenu.appendChild(wrapper);
-  });
-}

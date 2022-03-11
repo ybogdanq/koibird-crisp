@@ -172,6 +172,7 @@
 
 .header__burger_close {
   display: none;
+  z-index: 11;
 }
 
 @media screen and (max-width: 1200px) {
@@ -226,6 +227,25 @@
         .list__item {
           font-size: 14px;
           line-height: 18.77px;
+          .list__item__child {
+            padding: 30px 40px;
+            grid-template-columns: repeat(2, minmax(min-content, 250px));
+            gap: 0px 70px;
+            li {
+              max-width: 200px;
+              a {
+                font-size: $base-font-size - 1px;
+                padding-bottom: 8px;
+
+                &::after {
+                  height: 5px;
+                }
+              }
+            }
+            li:nth-child(even) {
+              margin-bottom: 22px;
+            }
+          }
         }
       }
     }
@@ -260,6 +280,25 @@
         .list__item {
           font-size: 13px;
           line-height: 18.77px;
+          .list__item__child {
+            padding: 30px 30px;
+
+            gap: 0px 50px;
+            li {
+              max-width: 200px;
+              a {
+                font-size: $base-font-size - 2px;
+                padding-bottom: 8px;
+
+                &::after {
+                  height: 5px;
+                }
+              }
+            }
+            li:nth-child(even) {
+              margin-bottom: 21px;
+            }
+          }
         }
       }
     }
@@ -299,10 +338,13 @@
     }
     .header__bottomside {
       flex: 0 0 1;
+      max-height: 80vh;
       overflow: scroll;
+      margin: 0;
       .bottomside__list {
         flex-direction: column-reverse;
-
+        max-height: 100%;
+        overflow: hidden;
         .list__item {
           padding: 10px 0px;
           width: 100%;
@@ -325,7 +367,6 @@
               overflow: hidden;
               text-overflow: ellipsis;
               padding: 5px 0px 5px 10px;
-              border-bottom: 1px solid $color-lightgrey;
               a {
                 padding-bottom: 8px;
                 position: relative;
@@ -354,9 +395,9 @@
     .controls__wrapper {
       display: flex;
       flex-direction: column-reverse;
+      background-color: $color-white;
       .account__controls {
-        margin-right: 20px;
-
+        margin-right: 0px;
         span {
           position: relative;
           font-size: 13px;

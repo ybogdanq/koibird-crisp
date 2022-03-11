@@ -8,12 +8,18 @@ const body = document.body;
 let currentEl = null;
 
 document.addEventListener("DOMContentLoaded", () => {
-  if (document.documentElement.clientWidth <= 768) {
+  if (document.documentElement.clientWidth < 768) {
     onMinResizeHandler();
   }
   window.addEventListener("resize", (e) => {
     if (document.documentElement.clientWidth <= 768) {
       onMinResizeHandler();
+    }
+    if (
+      document.documentElement.clientWidth >= 769 &&
+      document.documentElement.clientWidth <= 775
+    ) {
+      document.location.reload();
     }
   });
 
@@ -45,3 +51,13 @@ expandLinks.forEach((link) => {
     });
   });
 });
+
+function onMinResizeHandler() {
+  const headerElementsToHide = document.querySelectorAll(
+    "[data-responsive-hide]"
+  );
+
+  headerElementsToHide.forEach((wrapper) => {
+    burgerMenu.appendChild(wrapper);
+  });
+}
