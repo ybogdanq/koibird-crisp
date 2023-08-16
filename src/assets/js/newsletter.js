@@ -11,6 +11,6 @@ form.addEventListener("submit", (e) => {
     alert("Successfully signed up to our newsletter");
     form.reset();
   } else {
-    alert("Checkbox doesn't checked or invalid email");
+    alert("Checkbox must be checked / Invalid email");
   }
 });

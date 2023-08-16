@@ -7,13 +7,24 @@ const searchWrapper = document.querySelector(".header__search");
 const body = document.body;
 let currentEl = null;
 
+// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+let vh = window.innerHeight * 0.01;
+// Then we set the value in the --vh custom property to the root of the document
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+
 document.addEventListener("DOMContentLoaded", () => {
-  if (document.documentElement.clientWidth <= 768) {
+  if (document.documentElement.clientWidth < 768) {
     onMinResizeHandler();
   }
   window.addEventListener("resize", (e) => {
     if (document.documentElement.clientWidth <= 768) {
       onMinResizeHandler();
+    }
+    if (
+      document.documentElement.clientWidth >= 769 &&
+      document.documentElement.clientWidth <= 775
+    ) {
+      document.location.reload();
     }
   });
 
@@ -46,4 +57,12 @@ expandLinks.forEach((link) => {
   });
 });
 
+function onMinResizeHandler() {
+  const headerElementsToHide = document.querySelectorAll(
+    "[data-responsive-hide]"
+  );
 
+  headerElementsToHide.forEach((wrapper) => {
+    burgerMenu.appendChild(wrapper);
+  });
+}
